@@ -5,6 +5,7 @@ int enemyNumber;
 int playerScore = 0;
 int enemyScore = 0;
 
+//Creating a random type object
 Random random = new Random();
 
 for (int i = 0; i < 10; i++)
@@ -12,9 +13,11 @@ for (int i = 0; i < 10; i++)
     Console.WriteLine("Press any key to roll the dice !");
     Console.ReadKey();
 
+    //Next(1, 7) its a method allowing us to give the range we want [1;7) - first element its inclusive, second its exclusive
     playerNumber = random.Next(1, 7);
     Console.WriteLine($"You rolled a : {playerNumber} ");
 
+    //Mimic a period of time (1000 miliseconds =1 second) for the other number to be generated
     Console.WriteLine("----");
     System.Threading.Thread.Sleep(1000);
 
